@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -6,8 +6,148 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body{ 
+	background: DarkSlateGray;  
+	min-width: 880px; /*da rivedere*/   
+	font-family: Verdana, sans-serif;  
+}  
+
+
+#testa{  
+	background:DarkSlateGray;  
+	padding: 50px 0px ;  
+	/*margin-left: -8px;
+	margin-right: -8px;*/
+}  
+
+#contenitore{  
+	background: #A52A2A;  
+    padding-left: 250px;  
+	overflow: hidden;  
+	/*margin-left: -8px;
+	margin-right: -8px;*/
+}  
+
+#contenitore .colonna{  
+	float: left;  
+	position: relative;  
+	padding-bottom: 20010px;  /* X + padding-bottom */  
+    margin-bottom: -20000px;  
+}  
+
+#centrale{  
+	background: rgb(207, 207, 207);   
+	width: 100%;  
+	padding: 20px 40px;  
+	
+	
+}  
+
+#sinistra{  
+	background: rgb(51, 51, 51);       
+	width: 230px; /*full width (250px) - padding sx e dx (20px)*/  
+	padding: 10px 10px;  
+	margin-left: -100%;  
+	right: 330px; /*full width + padding cc (80px dx e sx)*/  
+	border-left:10px solid rgb(22, 22, 22);  
+
+}  
+
+#pie_pag{  
+	background: rgb(22, 22, 22);  
+	clear: both;     
+    position: relative;  
+    padding: 20px 0px;  
+    text-align: center;	  
+	/*margin-left: -8px;  
+	margin-right: -8px;*/  
+	
+}  
+
+#pie_pag a {  
+	text-decoration: none;  
+	color: white;
+}  
+
+#pie_pag a:hover {  
+    background-color:#5F9EA0;  
+}  
+
+ul#menu {  
+	list-style: none;  
+	font-weight:bold;  
+    font-size: large;  
+    margin: 0;  
+    padding: 0;   
+	text-align: center;  
+	
+}  
+
+
+ul#menu li a {  
+    color: #fff;  
+    display: block;  
+    line-height: 60px;  
+    text-decoration: none;  
+   
+}  
+
+ul#menu li:hover {  
+    background-color:#5F9EA0;  
+    border-left: 5px solid #2F4F4F;  
+	border-right: 5px solid #2F4F4F;  
+	
+}  
+
+h1.spostato{
+	float: right;
+	padding-right: 100px;
+	padding-top: 30px;
+	color: #DAF7A6;
+	
+
+}
+
+#logo{
+	margin-left: 50px;
+}
+
+h3.colorato{
+	color:salmon;
+}
+
+p, h2, h3{
+	width:90%;
+}
+
+#bookImg {
+  width: 200px;
+  height: 200px; 
+  margin:15px;
+  padding-top:0px;
+  
+}
+#bookImg img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+button.loadData {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding: 10px;
+}
+
+button.loadData:hover {
+  background-color: #555555;
+  color: white;
 }
