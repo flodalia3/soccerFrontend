@@ -9,13 +9,14 @@ function TableReferees(props){
       p.then((res) => setReferees(res.data));
     };
 
+    loadReferee();
+
     return(
         <div>
-        <button className="loadData" onClick={loadReferee}>Load Referee from Server</button>
-        <table>
+        {/*<button className="loadData" onClick={loadReferee}>Load Referee from Server</button>*/}
+        <table className='tableData'>
         <thead>
           <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Surname</th>
             <th>Date of Birth</th>

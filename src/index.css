@@ -29,7 +29,7 @@ body{
 
 #contenitore{  
 	background: #A52A2A;  
-    padding-left: 250px;  
+    /*padding-left: 250px; */ 
 	overflow: hidden;  
 	/*margin-left: -8px;
 	margin-right: -8px;*/

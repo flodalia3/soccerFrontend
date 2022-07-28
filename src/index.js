@@ -1,13 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import App from "./App";
+import Referee from "./Referee";
+import Player from "./Player";
+import Team from "./Team";
+import RefereeElement from './RefereeElement';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+         <Route path="player" element={<Player />} />
+         <Route path="referee" element={<Referee />}>
+            <Route
+              index
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Seleziona una statistica</p>
+                </main>
+              }
+            />
+            <Route path=":refereeId" element={<RefereeElement />} />
+         </Route>
+         <Route path="team" element={<Team />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

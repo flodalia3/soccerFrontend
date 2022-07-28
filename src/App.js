@@ -3,14 +3,27 @@ import './App.css';
 import axios from 'axios';
 import TableReferees from './TableReferees';
 import React, { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
 
   return (
-    <div className="App">
-      <TableReferees />
+    
+    <div>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="referee">Referee</Link> |{" "}
+        <Link to="player">Player</Link> |{" "}
+        <Link to="team">Team</Link>
+      </nav>
+      <Outlet />
+      
     </div>
   );
 }
-
+//<TableReferees />
 export default App;
