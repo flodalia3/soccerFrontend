@@ -5,16 +5,16 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import axios from 'axios';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Referee() {
-  const [referees, setReferees] = useState([]);
+  let [referees, setReferees] = useState([]);
   let [searchParams, setSearchParams] = useSearchParams();
-  const getReferee = () => {
+  let loadReferees = () => {
       const p = axios.get("http://localhost:8080/referee");
       p.then((res) => setReferees(res.data));
   };
-  getReferee();
+  useEffect(loadReferees, []);
     return (
       <div style={{ display: "flex" }}>
             <nav

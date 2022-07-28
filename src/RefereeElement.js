@@ -1,20 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 
 export default function RefereeElement() {
     let params = useParams();
-    const [referee, setReferee] = useState([]);
+    let [referee, setReferee] = useState([]);
     //sistemare il passaggio dell'url
-    const id = params.refereeId;
-    const url = 'http://localhost:8080/referee/';
-    url.concat(id);
-    console.log('id:', url);
-    const getRefereeFromId = () => {
+    //const url = "http://localhost:8080/referee/" + params.idReferee;
+    //url.concat(params.idReferee);
+    const loadRefereeFromId = () => {
         const p = axios.get(url);
         p.then((res) => setReferee(res.data));
     };
-    //getRefereeFromId();
+    useEffect(loadRefereeFromId);
 
     return (
         <main style={{ padding: "1rem" }}>
