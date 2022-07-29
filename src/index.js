@@ -14,6 +14,7 @@ import Team from "./Team";
 import RefereeElement from './RefereeElement';
 import TeamElement from './TeamElement';
 import TopScorers from './TopScorers';
+import TopAssists from './TopAssists';
 import PlayerElement from './PlayerElement';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -33,6 +34,7 @@ root.render(
             <Route path=":playerId" element={<PlayerElement />} />
          </Route>
          <Route path="player/topgoals" element={<TopScorers />} />
+         <Route path="player/topas  sists" element={<TopAssists />} />
          <Route path="referee" element={<Referee />}>
             <Route
               index
@@ -55,6 +57,7 @@ root.render(
             />
             <Route path=":teamId" element={<TeamElement />} />
          </Route>
+         
          <Route
             path="*"
             element={
