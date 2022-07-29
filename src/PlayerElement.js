@@ -16,13 +16,13 @@ export default function PlayerElement() {
         <main style={{ padding: "1rem" }}>
             <h2>{player.name} {player.surname}</h2>
             <p> 
-               Data di nascita: {player.dob} <br />
-               Luogo di nascita: {player.birthCity} <br />
-               Numero di maglia: {player.jersey} <br />
-               Squadra: {player.jersey} <br />
-               Ruolo: {player.roleName} <br />
-               Numero di goals: {player.numGoals} <br />
-               Numero di assist: {player.numAssists} <br />
+               Date of Birth: {player.dob} <br />
+               Birth city: {player.birthCity} <br />
+               Jersey number: {player.jersey} <br />
+                Current Team: {player.teamName} <br />
+               Main role: {player.roleName} <br />
+               Goals: {player.numGoals} <br />
+               Assists: {player.numAssists} <br />
             </p>
             <p></p>
         </main>
