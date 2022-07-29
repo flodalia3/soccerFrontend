@@ -34,7 +34,7 @@ root.render(
             <Route path=":playerId" element={<PlayerElement />} />
          </Route>
          <Route path="player/topgoals" element={<TopScorers />} />
-         <Route path="player/topas  sists" element={<TopAssists />} />
+         <Route path="player/topassists" element={<TopAssists />} />
          <Route path="referee" element={<Referee />}>
             <Route
               index
