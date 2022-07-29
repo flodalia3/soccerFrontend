@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import './TeamElement.css';
+
+import logo from './logo.svg';
+// import roma from './images/roma.svg';
 import {
     NavLink,
     Outlet,
@@ -23,6 +27,7 @@ export default function TeamElement() {
         <main style={{ padding: "1rem" }}>
             <h2>{team.name}</h2>
             <p>
+                <img className = "logo" src={`../images/${team.logo}.svg`}/> <br/>
                Motto: {team.motto} <br />
                Titoli vinti: {team.titles} <br />
                Città: {team.cityName} <br />
