@@ -19,7 +19,9 @@ function App() {
         <Link to="referee">Referee</Link> |{" "}
         <Link to="player">Player</Link> |{" "}
         <Link to="team">Team</Link> |{" "}
-        <Link to="player/topgoals">TopScorers</Link>
+        <Link to="player/topgoals">Top Scorers</Link> | {" "}
+        <Link to="player/topassists">Top Assist Men</Link>
+
       </nav>
       <Outlet />
       
