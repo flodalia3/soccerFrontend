@@ -127,19 +127,6 @@ p, h2, h3{
 	width:90%;
 }
 
-#bookImg {
-  width: 200px;
-  height: 200px; 
-  margin:15px;
-  padding-top:0px;
-  
-}
-#bookImg img {
-  width: 100%;
-  height:100%;
-  object-fit: cover;
-}
-
 button.loadData {
   background-color: white;
   color: black;

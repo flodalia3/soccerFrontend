@@ -1,4 +1,3 @@
-import TableReferees from './TableReferees';
 import {
   NavLink,
   Outlet,
@@ -17,7 +16,7 @@ export default function Referee() {
   useEffect(loadReferees, []);
     return (
       <div style={{ display: "flex" }}>
-            <nav
+            <nav className='navigationBar'
                 style={{
                     borderRight: "solid 1px",
                     padding: "1rem",

@@ -12,6 +12,7 @@ import Referee from "./Referee";
 import Player from "./Player";
 import Team from "./Team";
 import RefereeElement from './RefereeElement';
+import TeamElement from './TeamElement';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -24,13 +25,31 @@ root.render(
               index
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>Seleziona una statistica</p>
+                  <p>Seleziona una albitro per vedere le sue informazioni</p>
                 </main>
               }
             />
             <Route path=":refereeId" element={<RefereeElement />} />
          </Route>
-         <Route path="team" element={<Team />} />
+         <Route path="team" element={<Team />}>
+         <Route
+              index
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Seleziona un team per vedere le sue informazioni</p>
+                </main>
+              }
+            />
+            <Route path=":teamId" element={<TeamElement />} />
+         </Route>
+         <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
       </Route>
     </Routes>
     </BrowserRouter>
