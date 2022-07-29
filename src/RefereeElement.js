@@ -16,6 +16,7 @@ export default function RefereeElement() {
         <main style={{ padding: "1rem" }}>
             <h2>{referee.name} {referee.surname}</h2>
             <p> 
+                
                Data di nascita: {referee.dob} <br />
                Luogo di nascita: {referee.cityName} <br />
                Inizio carriera: {referee.workSince} 
