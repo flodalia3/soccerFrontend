@@ -60,7 +60,7 @@ header{
 }  
 
 #centrale{  
-	background: rgb(207, 207, 207);   
+	background: rgb(223, 223, 223);   
 	width: 100%;  
 	padding: 20px 40px;  
 	
@@ -257,16 +257,27 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  border-color: rgb(142, 140, 140);
+  border-color: rgb(154, 153, 153);
   border-style: solid;
+  border-radius: 10px;
   }
 
   nav a:hover {
-	background-color: #ddd;
+	background-color: rgb(239, 239, 239);
 	color: black;
   }
 
   nav a.active {
 	background-color: rgb(39, 39, 39);
 	color: white;
+  }
+
+  input{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
   }
