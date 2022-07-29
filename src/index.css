@@ -19,13 +19,30 @@ body{
 	font-family: Verdana, sans-serif;  
 }  
 
+footer{
+	background: rgb(22, 22, 22); 
+	color: yellow; 
+	clear: both;     
+    position: relative;  
+    padding: 20px 0px;  
+    text-align: center;
 
-#testa{  
+}
+
+header{  
 	background:DarkSlateGray;  
 	padding: 50px 0px ;  
+	margin-top: 20px;
+	height: 80%;
 	/*margin-left: -8px;
 	margin-right: -8px;*/
 }  
+
+.puntino{
+	font:1;
+	font: darkslategray;
+	color: darkslategray;
+}
 
 #contenitore{  
 	background: #A52A2A;  
@@ -60,16 +77,6 @@ body{
 
 }  
 
-#pie_pag{  
-	background: rgb(22, 22, 22);  
-	clear: both;     
-    position: relative;  
-    padding: 20px 0px;  
-    text-align: center;	  
-	/*margin-left: -8px;  
-	margin-right: -8px;*/  
-	
-}  
 
 #pie_pag a {  
 	text-decoration: none;  
@@ -138,3 +145,108 @@ button.loadData:hover {
   background-color: #555555;
   color: white;
 }
+
+
+
+
+
+
+
+
+
+
+/* From old project */
+body {
+	background: darkslategray;
+	font-family: "Oswald", sans-serif;
+	font-style: italic;
+  }
+  
+  .container {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 15%;
+	left: 50%;
+  }
+  
+  .glitch {
+	/* Pinkish colour */
+	color: rgb(223, 191, 191);
+	position: relative;
+	font-size: 9vw;
+	margin: 10px 500px;
+	animation: glitch 5s 5s infinite;
+  }
+  
+  .glitch::before {
+	content: attr(data-text);
+	position: absolute;
+	left: -2px;
+	text-shadow: -5px 0 magenta;
+	background: darkslategray;
+	overflow: hidden;
+	top: 0;
+	animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  .glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	left: 2px;
+	text-shadow: -5px 0 lightgreen;
+	background: darkslategray;
+	overflow: hidden;
+	top: 0;
+	animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  }
+  
+  @keyframes glitch {
+	1%{
+	  transform: rotateX(10deg) skewX(90deg);
+	}
+	2%{
+	  transform: rotateX(0deg) skewX(0deg);
+	}
+  }
+  
+  .scanlines {
+	overflow: hidden;
+	mix-blend-mode: difference;
+  }
+  
+  .scanlines::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	 /* if you zoom out you can still see the scanlines from top to bottom */
+	height: 120%;
+	top: 0;
+	left: 0;
+  
+	background: repeating-linear-gradient(
+	  to bottom,
+	  transparent 0%,
+	  rgba(255, 255, 255, 0.05) .5%,
+	  transparent 1%
+	);
+  
+	animation: fudge 7s ease-in-out alternate infinite;
+  }
+  
+  
+  @keyframes fudge {
+	from {
+	  transform: translate(0px, 0px);
+	}
+	to {
+	  transform: translate(0px, 2%);
+	}
+  }
+  
+  .glow {
+	@extend .glitch;
+	/* text-shadow: 0 0 1000px rgb(60, 210, 220); */
+	color: transparent;
+	position: absolute;
+	top: 0;
+  }

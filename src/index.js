@@ -26,7 +26,7 @@ root.render(
               index
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>Seleziona un giocatore per vedere le sue informazioni</p>
+                  <p>Select a player to see its information</p>
                 </main>
               }
             />
@@ -38,7 +38,7 @@ root.render(
               index
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>Seleziona una arbitro per vedere le sue informazioni</p>
+                  <p>Select a referee to see its information</p>
                 </main>
               }
             />
@@ -49,7 +49,7 @@ root.render(
               index
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>Seleziona un team per vedere le sue informazioni</p>
+                  <p>Select a team to see its information</p>
                 </main>
               }
             />
