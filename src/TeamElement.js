@@ -18,7 +18,6 @@ export default function TeamElement() {
     useEffect(loadTeamFromId, [id]);
     console.log("ecco i parametri", params);
     console.log("ecco il team", team);
-    let players = params.playerDTOs;
 
     return (
         <main style={{ padding: "1rem" }}>
@@ -28,26 +27,18 @@ export default function TeamElement() {
                Titoli vinti: {team.titles} <br />
                Città: {team.cityName} <br />
                Punti in classifica: {team.points} <br />
-               
             </p>
+            <ul>
+            </ul>
         </main>
     )
 }
 //da inserire l'immagine del logo
 //logo: {team.logo}
-/*{
-               players
-               .map((player) => (
-                <NavLink
-                    style={({ isActive }) => ({
-                        display: "block",
-                        margin: "1rem 0",
-                        color: isActive ? "red" : "",
-                    })}
-                    to={`/player/${player.id}`}
-                    key={player.id}
-                >
-                    {player.name} {player.surname}
-                </NavLink>
-            ))
-               } */ 
+ /*              {
+                team.playerDTOs.
+                map((player) => (
+                    <li>{player.jersey} {player.name} {player.surname}</li>
+                ))
+            }
+            */

@@ -13,19 +13,32 @@ import Player from "./Player";
 import Team from "./Team";
 import RefereeElement from './RefereeElement';
 import TeamElement from './TeamElement';
+import TopScorers from './TopScorers';
+import PlayerElement from './PlayerElement';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-         <Route path="player" element={<Player />} />
+         <Route path="player" element={<Player />}>
+         <Route
+              index
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Seleziona un giocatore per vedere le sue informazioni</p>
+                </main>
+              }
+            />
+            <Route path=":playerId" element={<PlayerElement />} />
+         </Route>
+         <Route path="player/topgoals" element={<TopScorers />} />
          <Route path="referee" element={<Referee />}>
             <Route
               index
               element={
                 <main style={{ padding: "1rem" }}>
-                  <p>Seleziona una albitro per vedere le sue informazioni</p>
+                  <p>Seleziona una arbitro per vedere le sue informazioni</p>
                 </main>
               }
             />
